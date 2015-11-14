@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9599997A-446D-4B30-8554-C051855134BE}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoadTransportFinal</RootNamespace>
+    <AssemblyName>RoadTransportFinal</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>RoadTransportFinal_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>bin\x86\Debug\RoadTransportFinal.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\CheckedListItem.cs" />
+    <Compile Include="Bindings\CheckedListItem1.cs" />
+    <Compile Include="Bindings\HttpPostRequest.cs" />
+    <Compile Include="Bindings\Slot.cs" />
+    <Compile Include="Bindings\Slot1.cs" />
+    <Compile Include="DrivingLicense\EDrivingLicense.xaml.cs">
+      <DependentUpon>EDrivingLicense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\MyDrivingLicense.xaml.cs">
+      <DependentUpon>MyDrivingLicense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Overview.xaml.cs">
+      <DependentUpon>Overview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Queries.xaml.cs">
+      <DependentUpon>Queries.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Services.xaml.cs">
+      <DependentUpon>Services.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Queries\learnerdetail.xaml.cs">
+      <DependentUpon>learnerdetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Queries\NR.xaml.cs">
+      <DependentUpon>NR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Queries\Receipts.xaml.cs">
+      <DependentUpon>Receipts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Queries\SOA.xaml.cs">
+      <DependentUpon>SOA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\LearnersRegistration.xaml.cs">
+      <DependentUpon>LearnersRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\LearnersRegistration1.xaml.cs">
+      <DependentUpon>LearnersRegistration1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\Next.xaml.cs">
+      <DependentUpon>Next.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\Renewal.xaml.cs">
+      <DependentUpon>Renewal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\Renewal1.xaml.cs">
+      <DependentUpon>Renewal1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\SlotBooking.xaml.cs">
+      <DependentUpon>SlotBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\Sub_Services\SlotConfirmation.xaml.cs">
+      <DependentUpon>SlotConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingLicense\TestWebView.xaml.cs">
+      <DependentUpon>TestWebView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\changeofaddress.xaml.cs">
+      <DependentUpon>changeofaddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\changeofaddress1.xaml.cs">
+      <DependentUpon>changeofaddress1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regrenewal.xaml.cs">
+      <DependentUpon>Regrenewal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regrenewal1.xaml.cs">
+      <DependentUpon>Regrenewal1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TempReg\Continue.xaml.cs">
+      <DependentUpon>Continue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TempReg\Pretempreg.xaml.cs">
+      <DependentUpon>Pretempreg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TempReg\Tempreg.xaml.cs">
+      <DependentUpon>Tempreg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Faq.xaml.cs">
+      <DependentUpon>Faq.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Reset\Email.xaml.cs">
+      <DependentUpon>Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Reset\OTP.xaml.cs">
+      <DependentUpon>OTP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Reset\ResetByOTP.xaml.cs">
+      <DependentUpon>ResetByOTP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Signup.xaml.cs">
+      <DependentUpon>Signup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="logout.xaml.cs">
+      <DependentUpon>logout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Contacts.xaml.cs">
+      <DependentUpon>Contacts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Personal.xaml.cs">
+      <DependentUpon>Personal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\payment.xaml.cs">
+      <DependentUpon>payment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\payment1.xaml.cs">
+      <DependentUpon>payment1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\payment2.xaml.cs">
+      <DependentUpon>payment2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\payment3.xaml.cs">
+      <DependentUpon>payment3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PollutionCheck\CheckStatus.xaml.cs">
+      <DependentUpon>CheckStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Saved.xaml.cs">
+      <DependentUpon>Saved.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PollutionCheck\appointment.xaml.cs">
+      <DependentUpon>appointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PollutionCheck\appointment1.xaml.cs">
+      <DependentUpon>appointment1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PollutionCheck\appointment2.xaml.cs">
+      <DependentUpon>appointment2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PollutionCheck\Overview.xaml.cs">
+      <DependentUpon>Overview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoadTax\CheckStatus.xaml.cs">
+      <DependentUpon>CheckStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoadTax\Overview.xaml.cs">
+      <DependentUpon>Overview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoadTax\payonline1.xaml.cs">
+      <DependentUpon>payonline1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoadTax\printreceipt.xaml.cs">
+      <DependentUpon>printreceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Savedapp\DL.xaml.cs">
+      <DependentUpon>DL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Savedapp\PC.xaml.cs">
+      <DependentUpon>PC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Savedapp\Receipts\Show.xaml.cs">
+      <DependentUpon>Show.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Savedapp\Receipts\ShowEach.xaml.cs">
+      <DependentUpon>ShowEach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Savedapp\RT.xaml.cs">
+      <DependentUpon>RT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Savedapp\VR.xaml.cs">
+      <DependentUpon>VR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.xaml.cs">
+      <DependentUpon>Startup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\CheckDetails.xaml.cs">
+      <DependentUpon>CheckDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\myvehicle.xaml.cs">
+      <DependentUpon>myvehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Overview.xaml.cs">
+      <DependentUpon>Overview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\queries.xaml.cs">
+      <DependentUpon>queries.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\services.xaml.cs">
+      <DependentUpon>services.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Sub_Queries\CAS.xaml.cs">
+      <DependentUpon>CAS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Sub_Queries\NR.xaml.cs">
+      <DependentUpon>NR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Sub_Queries\Recipts.xaml.cs">
+      <DependentUpon>Recipts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Sub_service\noc.xaml.cs">
+      <DependentUpon>noc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Sub_service\slot.xaml.cs">
+      <DependentUpon>slot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\Sub_service\Slot1.xaml.cs">
+      <DependentUpon>Slot1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\vehicledetails.xaml.cs">
+      <DependentUpon>vehicledetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReg\vehicledetails2.xaml.cs">
+      <DependentUpon>vehicledetails2.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="RoadTransportFinal_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\1.jpg" />
+    <Content Include="Assets\2.png" />
+    <Content Include="Assets\4.jpg" />
+    <Content Include="Assets\5.png" />
+    <Content Include="Assets\726.jpg" />
+    <Content Include="Assets\about.png" />
+    <Content Include="Assets\applying_icon.png" />
+    <Content Include="Assets\asterik.jpg" />
+    <Content Include="Assets\asterisk.gif" />
+    <Content Include="Assets\auth_icon.png" />
+    <Content Include="Assets\bday_icon.png" />
+    <Content Include="Assets\calendar_trans.png" />
+    <Content Include="Assets\car_icon.png" />
+    <Content Include="Assets\date_icon.png" />
+    <Content Include="Assets\DLFlipScreen.png" />
+    <Content Include="Assets\dltemplate.png" />
+    <Content Include="Assets\dl_im1.png" />
+    <Content Include="Assets\asterik.jpg" />
+    <Content Include="Assets\banner.jpg" />
+    <Content Include="Assets\congested.jpg" />
+    <Content Include="Assets\download.jpg" />
+    <Content Include="Assets\DrivingLicence.png" />
+    <Content Include="Assets\drivinglicense1.png" />
+    <Content Include="Assets\Ecommerce-Receipt-icon.png" />
+    <Content Include="Assets\education.png" />
+    <Content Include="Assets\Emblem_of_the_ROI.png" />
+    <Content Include="Assets\drivinglicense1.png" />
+    <Content Include="Assets\faq.png" />
+    <Content Include="Assets\fb_icon.png" />
+    <Content Include="Assets\ff.png" />
+    <Content Include="Assets\finance_03-512.png" />
+    <Content Include="Assets\gender.png" />
+    <Content Include="Assets\ha.png" />
+    <Content Include="Assets\housenum.png" />
+    <Content Include="Assets\icon_kk_back.scale-100.png" />
+    <Content Include="Assets\icon_kk_back.scale-200.png" />
+    <Content Include="Assets\icon_kk_back.scale-400.png" />
+    <Content Include="Assets\icon_roadtransport.png" />
+    <Content Include="Assets\identification_mark.jpg" />
+    <Content Include="Assets\ii.png" />
+    <Content Include="Assets\img.svg" />
+    <Content Include="Assets\instagram.png" />
+    <Content Include="Assets\key.png" />
+    <Content Include="Assets\me.png" />
+    <Content Include="Assets\namepic.png" />
+    <Content Include="Assets\password.png" />
+    <Content Include="Assets\Machine.jpg" />
+    <Content Include="Assets\paypal.png" />
+    <Content Include="Assets\paypal1.png" />
+    <Content Include="Assets\paypal2.png" />
+    <Content Include="Assets\paypal3.jpg" />
+    <Content Include="Assets\paypal4.jpg" />
+    <Content Include="Assets\paypal_logo.gif" />
+    <Content Include="Assets\PCFlipScreen.png" />
+    <Content Include="Assets\pollution.jpg" />
+    <Content Include="Assets\queryicon.png" />
+    <Content Include="Assets\road.jpg" />
+    <Content Include="Assets\Roads.png" />
+    <Content Include="Assets\RTFlipScreen.png" />
+    <Content Include="Assets\service_icon.png" />
+    <Content Include="Assets\pollutioncontrol.png" />
+    <Content Include="Assets\queryicon.png" />
+    <Content Include="Assets\rd_tax.png" />
+    <Content Include="Assets\service_icon.png" />
+    <Content Include="Assets\signin.png" />
+    <Content Include="Assets\signup.png" />
+    <Content Include="Assets\smilie.gif" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\stateTax.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\thumbsup.png" />
+    <Content Include="Assets\twitter.png" />
+    <Content Include="Assets\username.png" />
+    <Content Include="Assets\vhreg.png" />
+    <Content Include="Assets\truck.png" />
+    <Content Include="Assets\VRFlipScreen.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DrivingLicense\EDrivingLicense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\MyDrivingLicense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Overview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Queries.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Services.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Queries\learnerdetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Queries\NR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Queries\Receipts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Queries\SOA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\LearnersRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\LearnersRegistration1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\Next.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\Renewal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\Renewal1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\SlotBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\Sub_Services\SlotConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrivingLicense\TestWebView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\changeofaddress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\changeofaddress1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\Regrenewal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\Regrenewal1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\TempReg\Continue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\TempReg\Pretempreg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\TempReg\Tempreg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Faq.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\ForgotPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Reset\Email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Reset\OTP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Reset\ResetByOTP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Signup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="logout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Contacts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Personal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment\payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment\payment1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment\payment2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment\payment3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PollutionCheck\CheckStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Saved.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PollutionCheck\appointment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PollutionCheck\appointment1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PollutionCheck\appointment2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PollutionCheck\Overview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Images.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="RoadTax\CheckStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoadTax\Overview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoadTax\payonline1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RoadTax\printreceipt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Savedapp\DL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Savedapp\PC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Savedapp\Receipts\Show.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Savedapp\Receipts\ShowEach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Savedapp\RT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Savedapp\VR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Startup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\CheckDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\myvehicle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VehicleReg\Overview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VehicleReg\queries.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VehicleReg\services.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VehicleReg\Sub_Queries\CAS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\Sub_Queries\NR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\Sub_Queries\Recipts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\Sub_service\noc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\Sub_service\slot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\Sub_service\Slot1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\vehicledetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleReg\vehicledetails2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Responsive\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

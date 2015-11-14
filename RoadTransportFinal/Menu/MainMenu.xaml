@@ -1,0 +1,148 @@
+﻿<Page
+    x:Class="RoadTransportFinal.Menu.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RoadTransportFinal.Menu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        
+            <Grid x:Name="ownnum" RequestedTheme="Dark">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF015C70" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+            <ScrollViewer>
+                <RelativePanel>
+                <StackPanel>            
+                <RelativePanel x:Name="k">
+                    <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}" Margin="8" Text="RoadPlex"></TextBlock>
+                </RelativePanel>
+                <RelativePanel>
+                    <Pivot Height="500">
+                        <PivotItem Header="Driving License" Foreground="Blue" FontSize="12" Margin="12,0,12,0">
+                            <Grid Width="auto" Margin="10">
+                                <RelativePanel x:Name="dlcontainer">
+                                    <Image x:Name="header" HorizontalAlignment="Stretch" RelativePanel.AlignHorizontalCenterWithPanel="True" 
+                                       RelativePanel.AlignTopWithPanel="True"  Height="174" Margin="0,10,0,0" VerticalAlignment="Top" Width="280" Source="ms-appx:///Assets/DrivingLicence.png"/>
+
+                                    <TextBlock x:Name="about" Padding="5,0,0,5"
+        	HorizontalAlignment="Stretch" RelativePanel.Below="header" TextWrapping="Wrap" Text="A driver's license/licence, driver licence, or driving licence is an official document that states that a person may operate one or more types of motorized vehicles, such as a motorcycle, car, truck, or a bus, on a public roadway without in-vehicle supervision. 
+                   "  Foreground="#FF71CFC2" FontSize="16" />
+                                    <Button x:Name="button" RelativePanel.Below="about"   RelativePanel.AlignHorizontalCenterWithPanel="True" HorizontalAlignment="Stretch" Content="Get Started" Foreground="Black" FontWeight="Bold" Height="46"  Click="button_Click"  BorderBrush="#FFFFFF19">
+                                        <Button.Transitions>
+                                            <TransitionCollection>
+                                                <EntranceThemeTransition/>
+                                            </TransitionCollection>
+                                        </Button.Transitions>
+                                    </Button>
+
+                                </RelativePanel>
+                            </Grid>
+
+                        </PivotItem>
+
+                        <PivotItem Header="Vehicle Registration" Foreground="Blue" FontSize="12">
+                            <Grid Width="auto">
+                                <RelativePanel>
+                                    <Image x:Name="vehicle" Source="ms-appx:///Assets/2.png" RelativePanel.AlignHorizontalCenterWithPanel="True"  Width="280"/>
+
+                                    <TextBlock x:Name="aboutvr" RelativePanel.Below="vehicle"
+        	                        Padding="5,0,0,5"
+        	                         HorizontalAlignment="Center" TextWrapping="Wrap" Text="Vehicle registration is the (usually) compulsory registration of a vehicle with a government authority. Vehicle registration's purpose is to establish clear ownership and to tax motorists or vehicle owners.Registration of vehicles in India is done by the local RTO of that state.
+                                    "  Foreground="#FF71CFC2" FontSize="16" />
+
+                                    <Button x:Name="button1" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="aboutvr" Content="Get Started"  Foreground="Black" FontWeight="Bold" Height="41" Width="115" Click="button1_Click" BorderBrush="#FFFFFF19">
+                                        <Button.Transitions>
+                                            <TransitionCollection>
+                                                <EntranceThemeTransition/>
+                                            </TransitionCollection>
+                                        </Button.Transitions>
+                                    </Button>
+                                </RelativePanel>
+                            </Grid>
+
+                        </PivotItem>
+
+                        <PivotItem Header="Road Tax" Foreground="Blue" FontSize="12">
+                            <Grid Width="auto">
+                                <RelativePanel>
+                                    <Image x:Name="header2" RelativePanel.AlignHorizontalCenterWithPanel="True"  
+                                       HorizontalAlignment="Stretch" Height="174"  
+                                       VerticalAlignment="Top" Width="280" Source="ms-appx:///Assets/stateTax.png"/>
+                                    <TextBlock x:Name="about2" 
+        	                    Padding="5,0,0,5"
+        	                        HorizontalAlignment="Stretch" RelativePanel.Below="header2" TextWrapping="Wrap" Text="Road tax, known by various names around the world, is a tax which has to be paid on a motor vehicle before using it on a public road. 
+                                        " VerticalAlignment="Top" Foreground="#FF71CFC2" FontSize="16" />
+                                    <Button x:Name="button2" Margin="0,20" Content="Get Started" HorizontalAlignment="Stretch" 
+                                        RelativePanel.Below="about2"  RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                        VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" Height="41" Width="115" 
+                                        Click="button2_Click" BorderBrush="#FFFFFF19">
+                                        <Button.Transitions>
+                                            <TransitionCollection>
+                                                <EntranceThemeTransition/>
+                                            </TransitionCollection>
+                                        </Button.Transitions>
+                                    </Button>
+                                </RelativePanel>
+                            </Grid>
+                        </PivotItem>
+                        <PivotItem Header="Pollution Check" Foreground="Blue" FontSize="12">
+                            <Grid>
+                                <RelativePanel>
+                                    <Image x:Name="pollution" Source="ms-appx:///Assets/pollution.jpg"
+                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                       HorizontalAlignment="Stretch"  Height="174" Width="280"></Image>
+                                    <TextBlock x:Name="aboutpc" RelativePanel.Below="pollution"
+        	            Padding="5,0,0,5"
+        	            HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="The Non Polluting Vehicle mark is a mandatory certification mark required on all new motor vehicles sold in India. The mark certifies that the motor vehicle conforms to the relevant version of the Bharat Stage emission standards."
+                        VerticalAlignment="Top" Foreground="#FF71CFC2" FontSize="16"/>
+
+                                    <Button x:Name="button3" Content="Get Started" 
+                                        RelativePanel.Below="aboutpc"
+                                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                        HorizontalAlignment="Stretch" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" Height="41" Width="115" Click="button3_Click" BorderBrush="#FFFFFF19">
+                                        <Button.Transitions>
+                                            <TransitionCollection>
+                                                <EntranceThemeTransition/>
+                                            </TransitionCollection>
+                                        </Button.Transitions>
+                                    </Button>
+                                </RelativePanel>
+                            </Grid>
+
+                        </PivotItem>
+
+                    </Pivot>
+                </RelativePanel>
+                </StackPanel>
+
+                </RelativePanel>
+            </ScrollViewer>
+            
+                
+            
+            
+        </Grid>
+        
+    </ScrollViewer>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Background="#FF015C70" Opened="CommandBar_Opened" >
+
+            <AppBarButton Icon="ShowResults" Label="View Saved Applications/Checkout" Click="AppBarButton_Click"></AppBarButton>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Setting" Label="Settings" Click="AppBarButton_Click_4"/>
+                <AppBarButton Icon="Phone" Label="Contact Us" Click="AppBarButton_Click_3"/>
+                <AppBarButton Icon="Account" Label="Personal Info" Click="MyDetails"/>
+                <AppBarButton Label="Logout" Icon="Stop" Click="AppBarButton_Click_1"/>
+            </CommandBar.SecondaryCommands>
+            <CommandBar.Content>
+                <TextBlock Text="Road Transport" Margin="12,14"/>
+            </CommandBar.Content>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

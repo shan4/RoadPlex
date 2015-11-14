@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="RoadTransportFinal.logout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RoadTransportFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        <Grid x:Name="ownnum" RequestedTheme="Dark">
+            <Grid.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/thank you.png"
+                    Stretch="Uniform"
+                    Opacity="1" />
+            </Grid.Background>
+            <TextBlock x:Name="about"
+        	Padding="5,0,0,5"
+        	HorizontalAlignment="Stretch" Margin="21,31,17,0" TextWrapping="Wrap" Text="Thank You for using the app..... "
+                  VerticalAlignment="Top" Foreground="Black" FontSize="33.333"  Height="91" Width="322" FontWeight="Bold"/>
+            <Button x:Name="button_home" Content="Home" Click="home_Click" HorizontalAlignment="Stretch" Margin="133,532,160,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" Height="34" Width="66" BorderBrush="#FFFFFF19" Background="#FF2FB01A">
+                <Button.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </Button.Transitions>
+            </Button>
+            <Image x:Name="image" HorizontalAlignment="Stretch" Height="35" Margin="189,79,127,0" VerticalAlignment="Top" Width="44" Source="ms-appx:///Assets/smilie.gif"/>
+            <TextBlock x:Name="quote1" HorizontalAlignment="Stretch" Margin="40,155,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" Height="76" FontSize="18.667" Foreground="Black" FontWeight="Bold">
+            	<Run Text="&quot;Its better to be Mr. Late than Late Mr.&quot;"/>
+            	<LineBreak/>
+            	<Run Text="                                   -Anonymous"/>
+            </TextBlock>
+            <TextBlock x:Name="quote2" HorizontalAlignment="Stretch" Margin="49,255,42,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" Height="85">
+            	<Run FontWeight="Bold" Text="                    "/>
+            	<Run Foreground="Black" FontWeight="Bold" Text="FOLLOW RULES"/>
+            	<LineBreak/>
+            	<Run Foreground="Black" FontWeight="Bold" Text="                      DRIVE SAFELY"/>
+            	<LineBreak/>
+            	<Run Foreground="Black" FontWeight="Bold" Text="                       STAY HAPPY "/>
+            	<LineBreak/>
+            	<Run Foreground="Black" FontWeight="Bold" Text="                      STAY BLESSED"/>
+            	<LineBreak/>
+            	<Run FontWeight="Bold" Text="                             "/>
+            </TextBlock>
+            <Image x:Name="likefb" HorizontalAlignment="Stretch" Height="22" Margin="128,382,135,0" VerticalAlignment="Top" Source="ms-appx:///Assets/fb_icon.png"/>
+            <HyperlinkButton Content="Facebook" NavigateUri="https://www.facebook.com/rishabh.saxena11" HorizontalAlignment="Stretch" Margin="230,375,47,0" VerticalAlignment="Top" FontSize="18.667" Height="34" Width="83" Foreground="Black" FontWeight="Bold"/>
+            <Image x:Name="thumbsup2" HorizontalAlignment="Stretch" Height="32" Margin="83,260,235,0" VerticalAlignment="Top" Width="42" Source="ms-appx:///Assets/thumbsup.png"/>
+            <Image x:Name="thumbsup3" HorizontalAlignment="Stretch" Height="32" Margin="249,259,69,0" VerticalAlignment="Top" Width="42" Source="ms-appx:///Assets/thumbsup.png"/>
+            <Image x:Name="image2" HorizontalAlignment="Stretch" Height="24" Margin="144,411,143,0" VerticalAlignment="Top" Width="73" Source="ms-appx:///Assets/twitter.png"/>
+            <HyperlinkButton Content="Twitter" NavigateUri="" HorizontalAlignment="Stretch" Margin="229,406,60,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="18.667" Height="35"/>
+            <Image x:Name="instagram" HorizontalAlignment="Stretch" Height="48" Margin="130,434,131,0" VerticalAlignment="Top" Source="ms-appx:///Assets/instagram.png"/>
+            <HyperlinkButton Content="Instagram" NavigateUri="https://instagram.com/rishabh.saxena11" HorizontalAlignment="Stretch" Margin="228,436,42,0" VerticalAlignment="Top" Foreground="Black" FontSize="18.667" FontWeight="Bold"/>
+            <Button x:Name="exit" Content="Exit" HorizontalAlignment="Stretch" Margin="215,533,79,0" Click="exit_Click" VerticalAlignment="Top" BorderBrush="#FFFFFF19" Foreground="Black" FontWeight="Bold" Width="66" Background="#FFE61616"/>
+
+        </Grid>
+    </ScrollViewer>
+</Page>
